@@ -84,11 +84,11 @@ def build_statements(user: dict) -> list[str]:
     stmts.append(
         f"INSERT INTO userinfo "
         f"(userinfoid, uid, uuid, created, lastupdated, username, password, "
-        f"firstname, surname, disabled, selfregistered, invitation, passwordlastupdated) "
+        f"firstname, surname, disabled, externalauth, selfregistered, invitation, passwordlastupdated) "
         f"VALUES (nextval('hibernate_sequence'), {q(uid)}, {q(user_uuid)}::uuid, NOW(), NOW(), "
         f"{q(username)}, {q(password_hash)}, "
         f"{q(firstname)}, {q(surname)}, "
-        f"FALSE, FALSE, FALSE, NOW()) "
+        f"FALSE, FALSE, FALSE, FALSE, NOW()) "
         f"ON CONFLICT (username) DO NOTHING;"
     )
 
