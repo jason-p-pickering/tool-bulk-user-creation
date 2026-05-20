@@ -1,0 +1,18 @@
+# Excel source data
+*.xlsx
+
+# Generated SQL output
+*.sql
+
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+
+# Claude Code internal
+.claude/
+
+# Python
+__pycache__/
+*.pyc
